@@ -140,6 +140,7 @@ export default function MainBanner({ handleModalOpen }: MainBannerProps) {
                   key={poster.id}
                   src={`${BASE_IMAGE_URL}${poster.backdrop_path}`}
                   layout="fill"
+                  sizes="(max-width: 768px) 40vw, (max-width: 1200px) 14vw, 10vw"
                   alt="가로 이미지"
                   className={clsx(
                     'h-auto max-w-[358px] cursor-pointer rounded-2xl p-[0.4px]',
