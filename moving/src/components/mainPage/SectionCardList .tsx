@@ -1,18 +1,41 @@
 import Image from 'next/image';
 import StarIcon from '@/icons/starIcon.svg';
-import { useGenreStore } from '../../../store/useGenreStore';
-import { useEffect } from 'react';
-import { useTodayMovie } from '@/hook/mainpage/useTodayMovie';
+
 import dayjs from 'dayjs';
+import { useEffect } from 'react';
+import { useGenreStore } from '../../../store/useGenreStore';
 import { BASE_IMAGE_URL } from '@/api/mainpageAPI';
 import { motion } from 'framer-motion';
-interface TodayContentProps {
-  handleModalOpen?: (id: number) => void;
+
+interface Poster {
+  id: number;
+  poster_path: string;
+  title: string;
+  vote_average: number;
+  release_date: string;
+  genre_ids: number[];
 }
 
-export default function TodayContent({ handleModalOpen }: TodayContentProps) {
+interface Data {
+  results: Poster[];
+}
+
+interface SectionCardListProps {
+  handleModalOpen?: (id: number) => void;
+  data?: Data;
+  isLoading: boolean;
+  isError: boolean;
+  content: string;
+}
+
+export default function SectionCardList({
+  handleModalOpen,
+  data,
+  isLoading,
+  isError,
+  content,
+}: SectionCardListProps) {
   const { genres, fetchGenres } = useGenreStore();
-  const { data, isLoading, isError } = useTodayMovie();
 
   useEffect(() => {
     if (Object.keys(genres).length === 0) {
@@ -36,8 +59,8 @@ export default function TodayContent({ handleModalOpen }: TodayContentProps) {
   }
 
   return (
-    <section className="ml-[8.5vw] mt-14 flex flex-col md:mr-0 xl:mr-[8.5vw] ">
-      <h2 className="mb-7 text-2xl font-bold">오늘은 이 컨텐츠 어때요?</h2>
+    <section className="ml-[8.5vw] mt-[96px] flex flex-col md:mr-0 xl:mr-[8.5vw] ">
+      <h2 className="mb-7 text-2xl font-bold">{content}</h2>
       <ul className="scrollbar-hide flex gap-[2.8vw] overflow-y-hidden overflow-x-scroll">
         {limitedData?.map((poster) => (
           <motion.li
