@@ -95,7 +95,7 @@ export default function genre() {
                           alt="세로 포스터"
                           className="rounded-2xl"
                           placeholder="blur"
-                          blurDataURL={'/images/defaultPoster.png'}
+                          blurDataURL={'/images/defaultPosters.png'}
                         />
                       </div>
                       <span>{poster.title}</span>
