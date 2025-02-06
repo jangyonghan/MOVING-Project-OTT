@@ -30,6 +30,7 @@ export default function Home() {
             width={1920}
             height={840}
             alt="메인 베너"
+            priority
           />
           <div className="text-[#f3f3f3]] absolute left-[50%] top-[50%] w-[700px] translate-x-[-50%] translate-y-[-50%] text-center">
             <h1 className="text-[#f3f3f3]] flex flex-col gap-2  whitespace-nowrap">
