@@ -11,7 +11,6 @@ import clsx from 'clsx';
 import { useModal } from '@/lib/hook/useModal';
 import ModalFrame from '@/components/modal/ModalFrame';
 import DetailModal from '@/components/detail/DetailModal';
-import DefaultPoster from '@/images/defaultPoster.png';
 
 const DEFAULT_IMAGE = '/images/defaultPoster.png';
 
@@ -96,7 +95,7 @@ export default function genre() {
                           alt="세로 포스터"
                           className="rounded-2xl"
                           placeholder="blur"
-                          blurDataURL={DefaultPoster.src}
+                          blurDataURL={'/images/defaultPoster.png'}
                         />
                       </div>
                       <span>{poster.title}</span>
