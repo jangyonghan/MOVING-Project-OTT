@@ -11,8 +11,7 @@ import clsx from 'clsx';
 import { useModal } from '@/lib/hook/useModal';
 import ModalFrame from '@/components/modal/ModalFrame';
 import DetailModal from '@/components/detail/DetailModal';
-
-const DEFAULT_IMAGE = '/images/defaultPoster.png';
+import DEFAULT_IMAGE from '@/images/defaultPoster.png';
 
 export default function genre() {
   const router = useRouter();
@@ -96,6 +95,7 @@ export default function genre() {
                           className="rounded-2xl"
                           placeholder="blur"
                           blurDataURL={'/images/defaultPoster.png'}
+                          loading="lazy"
                         />
                       </div>
                       <span>{poster.title}</span>

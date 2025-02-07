@@ -78,6 +78,7 @@ export default function SearchResult({
                       className="rounded-2xl"
                       placeholder="blur"
                       blurDataURL={'/images/defaultPoster.png'}
+                      loading="lazy"
                     />
                   </div>
                   <span>{poster.title}</span>
