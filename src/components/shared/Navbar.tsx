@@ -35,13 +35,13 @@ export default function Navbar() {
   }, [fetchGenres]);
 
   const handleLogo = () => {
-    router.push('/mainPage');
+    router.push('/');
   };
 
   const handleSearch = () => {
     const query = inputRef.current?.value.trim();
     if (!query) {
-      router.push('/mainPage');
+      router.push('/');
     } else {
       router.push(`/search/${query}`);
     }
