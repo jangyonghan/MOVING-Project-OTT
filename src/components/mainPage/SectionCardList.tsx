@@ -80,6 +80,7 @@ export default function SectionCardList({
                 sizes="(max-width: 768px) 30vw, (max-width: 1200px) 23vw, 10.53vw"
                 alt="세로 포스터"
                 className="max-h-[290px] rounded-2xl object-cover"
+                loading="lazy"
               />
             </div>
             <div className=" my-2 flex items-center justify-between">

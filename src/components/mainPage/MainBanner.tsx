@@ -11,6 +11,7 @@ import { useVideos } from '@/hook/mainpage/useVideos';
 import { useEffect, useState } from 'react';
 import clsx from 'clsx';
 import { motion } from 'framer-motion';
+import DefaultRowImage from '@/images/defaultBackPoster.png';
 
 interface MainBannerProps {
   handleModalOpen?: (id: number) => void;
@@ -105,7 +106,11 @@ export default function MainBanner({ handleModalOpen }: MainBannerProps) {
             />
           ) : (
             <Image
-              src={`${BASE_IMAGE_URL}${currentGroup[currentMovieIndex].backdrop_path}`}
+              src={
+                currentGroup[currentMovieIndex]?.backdrop_path
+                  ? `${BASE_IMAGE_URL}${currentGroup[currentMovieIndex].backdrop_path}`
+                  : DefaultRowImage
+              }
               width={1730}
               height={707}
               sizes="(max-width: 768px) 80vw, (max-width: 1200px) 50vw, 30vw"
@@ -140,8 +145,13 @@ export default function MainBanner({ handleModalOpen }: MainBannerProps) {
               >
                 <Image
                   key={poster.id}
-                  src={`${BASE_IMAGE_URL}${poster.backdrop_path}`}
-                  priority
+                  src={
+                    poster.backdrop_path
+                      ? `${BASE_IMAGE_URL}${poster.backdrop_path}`
+                      : DefaultRowImage
+                  }
+                  priority={index < 4}
+                  fetchPriority={index < 4 ? 'high' : 'auto'}
                   layout="fill"
                   sizes="(max-width: 768px) 80vw, (max-width: 1200px) 30vw, 20vw"
                   alt="가로 이미지"
