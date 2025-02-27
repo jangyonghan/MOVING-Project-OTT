@@ -59,7 +59,8 @@ export default function MainBanner({ handleModalOpen }: MainBannerProps) {
 
   if (isLoading) {
     return (
-      <div className="bg-gray-800 h-[430px] animate-pulse md:h-[600px] xl:h-[708px]" />
+      <></>
+      // <div className="bg-gray-800 h-[430px] animate-pulse md:h-[600px] xl:h-[708px]" />
     );
   }
 
@@ -113,7 +114,7 @@ export default function MainBanner({ handleModalOpen }: MainBannerProps) {
               }
               width={1730}
               height={707}
-              sizes="(max-width: 768px) 80vw, (max-width: 1200px) 50vw, 30vw"
+              // sizes="(max-width: 768px) 80vw, (max-width: 1200px) 50vw, 30vw"
               alt="메인 베너"
             />
           )}
@@ -153,7 +154,7 @@ export default function MainBanner({ handleModalOpen }: MainBannerProps) {
                   priority={index < 4}
                   fetchPriority={index < 4 ? 'high' : 'auto'}
                   layout="fill"
-                  sizes="(max-width: 768px) 80vw, (max-width: 1200px) 30vw, 20vw"
+                  // sizes="(max-width: 768px) 80vw, (max-width: 1200px) 30vw, 20vw"
                   alt="가로 이미지"
                   className={clsx(
                     'h-auto max-w-[358px] cursor-pointer rounded-2xl p-[0.4px]',
