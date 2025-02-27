@@ -52,7 +52,8 @@ export default function SectionCardList({
 
   if (isLoading) {
     return (
-      <div className="bg-gray-800 h-[55vh] min-h-[300px] animate-pulse md:h-[50vh] xl:h-[45vh]" />
+      <></>
+      // <div className="bg-gray-800 h-[55vh] min-h-[300px] animate-pulse md:h-[50vh] xl:h-[45vh]" />
     );
   }
 
@@ -77,10 +78,10 @@ export default function SectionCardList({
               <Image
                 src={`${BASE_IMAGE_URL}${poster.poster_path}`}
                 layout="fill"
-                sizes="(max-width: 768px) 30vw, (max-width: 1200px) 23vw, 10.53vw"
+                // sizes="(max-width: 768px) 30vw, (max-width: 1200px) 23vw, 10.53vw"
                 alt="세로 포스터"
                 className="max-h-[290px] rounded-2xl object-cover"
-                loading="lazy"
+                // loading="lazy"
               />
             </div>
             <div className=" my-2 flex items-center justify-between">
