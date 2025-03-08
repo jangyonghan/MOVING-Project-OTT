@@ -92,6 +92,19 @@ axios와 React Query를 통한 데이터 패칭과, pramer motion을 통한 애�
 
 <br><br><br>
 
+## 📈 성능 개선
+
+> 개선전 <br>![alt text](image-5.png)
+
+> 개선후 <br> ![alt text](image-6.png)
+
+- LCP가 65.2% 개선
+- TBT가 50% 감소
+- CLS가 69.2% 개선
+- Speed Index 20% 향상
+
+<br>
+
 ## 🙍‍♂️ 팀원 소개
 
 | 이름   | 상세 내용                                                   |
