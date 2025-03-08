@@ -43,7 +43,6 @@ export default function SectionCardList({
     }
   }, [genres, fetchGenres]);
 
-  // genre_ids 배열을 장르 이름으로 변환
   const getGenreNames = (genreIds: number[]): string[] => {
     return genreIds.map((id) => genres[id] || '알 수 없음');
   };
